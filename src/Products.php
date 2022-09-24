@@ -18,10 +18,6 @@ class Products
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-
-
-
-
     public function index()
     {
 
@@ -75,10 +71,29 @@ class Products
         $stmt->bindParam(':is_active', $is_active);
         $stmt->bindParam(':picture', $_picture);
         $stmt->bindParam(':created_at', $created_at);
-
         $result = $stmt->execute();
         var_dump($result);
         header("Location: create.php");
     }
+    public function delete($_id){
+
+        // set the PDO error mode to exception
+        
+        
+                $query = "Delete FROM `products` WHERE id = :id";
+                $stmt = $this->conn->prepare($query);
+                $stmt->bindParam(':id', $_id);
+                $result = $stmt->execute();
+            }
+            public function trashDelete(){
+        
+                $query = "SELECT * FROM `products` where is_deleted = 1";
+                $stmt = $this->conn->prepare($query);
+                $result = $stmt->execute();
+        
+                $products = $stmt->fetchAll();
+        
+                return $products ;
+            }
 
 }
