@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="css/align.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-n">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="">
+                    <span class="icon"><i class="fas fa-home"></i> </span>
+                    <span class="title"><h2>Name</h2></span>
+                </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="icon"><i class="fas fa-newspaper"></i></span>
+                    <span class="title">Banner</span>
+                </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="icon"><i class="fas fa-comments"></i></span>
+                    <span class="title">Products</span>
+                </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="icon"><i class="fas fa-envelope-open-text"></i></span>
+                    <span class="title">Category</span>
+                </a>
+                </li>
+                <li>
+                    <a href="">
+                    <span class="icon"><i class="fas fa-key"></i></span>
+                    <span class="title">Lebels</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleManu();"><i class="fas fa-bars"></i> </div>
+                <div class="search">
+                     <label for="">
+                        <input type="text" placeholder="Search here">
+                        <i class="fas fa-search"></i>
+                    </label>   
+                  </div>
+                <div class="user">
+                    <img src="../assets/images/user.jpg" alt="">
+                  </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="number">100</div>
+                        <div class="cardName">Post</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">100</div>
+                        <div class="cardName">Post</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">100</div>
+                        <div class="cardName">Post</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">100</div>
+                        <div class="cardName">Post</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+       
+
+<script>
+    function toggleManu(){
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        toggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+    }
+</script>
+</body>
+
+</html>
